@@ -1,8 +1,10 @@
+import AppRouter from "./Router";
+
 
 function App() {
   return (
     <div>
-      <h2>Firebase Start</h2>
+      <AppRouter/>
     </div>
   );
 }

@@ -1,21 +1,11 @@
-import { useState } from 'react';
-import AppRouter from './Router';
-import { firebaseInstance } from '../firebaseInfo';
-import { dbService } from '../firebaseInfo';
+import React from "react"
+import Router from "./Router";
 
-function App() {
-
-  // firebase value test code
-  console.log(firebaseInstance);
-
-  const [isLoggedIn,setIsLoggedIn] = useState(false);
-
-  return (
-    <>
-      <AppRouter isLoggedIn={isLoggedIn}/>
-      <footer>&copy; {new Date().getFullYear()} Firebase Test </footer>
-    </>
-  );
+function App()
+{
+    return(
+        <Router />
+    )
 }
 
 export default App;

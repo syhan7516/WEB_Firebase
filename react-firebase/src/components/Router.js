@@ -1,24 +1,23 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import Auth from '../routes/Auth';
-import Home from '../routes/Home';
+import { React, useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+import Home from '../Routers/Home';
+import Auth from '../Routers/Auth';
 
-const AppRouter = ({isLoggedIn}) => {
+function Router()
+{
+    const [isLoggedIn,setIsLoggedIn] = useState(true);
 
-    return(
-        <Router>
-            <Routes>
-                {isLoggedIn
-                // 로그인되었을 때,
-                ?<>
-                    <Route path='/' element={<Home/>}/>
-                </>
-                // 로그인안되었을 때,
-                :<>
-                    <Route path='/' element={<Auth/>}/>
-                </>}
-            </Routes>
-        </Router>
+    return( 
+      <Routes>
+        {isLoggedIn ? (
+            <Route path="/" element={<Home />} />
+        ) 
+        : (
+            <Route path="/" element={<Auth />} />
+        )}
+        
+      </Routes>
     )
 }
 
-export default AppRouter;
+export default Router;

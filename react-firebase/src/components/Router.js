@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-import Home from '../Routers/Home';
-import Auth from '../Routers/Auth';
+import Home from '../routes/Home';
+import Auth from '../routes/Auth';
 
 function Router()
 {
